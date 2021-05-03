@@ -1,0 +1,82 @@
+= GP syntax Regex parser =
+
+ For the moment the regexes are tested for javascript (Ecmascript) and QRegExp (for Kate editor and other KDE programs). They are made with syntax highlighting in mind and not for other uses.
+
+ You can see examples of the regexes by clicking on the links.
+
+ Regexes that match ‘everything’ will match the whole expression and create individual groups for every element.
+
+== Definitions &amp; Declarations ==
+
+ Regexes that match ‘everything’ match the whole expression and create individual groups for every element. Those regexes will match 16 args max.
+==== Methods ====
+{| role="presentation" class="wikitable" 
+| colspan="3" | '''Regexes'''
+|-
+| rowspan="2" | '''Name'''
+| [https://regexr.com/5rlh6 ''Javascript''] : <code><nowiki>(?<=^defineClass '?)[^ '\n]+</nowiki></code>
+|-
+| [https://regexr.com/5rlhl ''QRegExp''] : <code><nowiki>(^\|\n)method '?\K[^ '\n]+</nowiki></code>
+|-
+| rowspan="2" | '''Everything'''
+| [https://regexr.com/5rlgk ''Javascript/QRegExp''] : <code>(?:^method )(?:'?)(?<funcName>[^ ']+)(?:'?)(?: )(?<className>\w+)(?: )(?:(?:(?:(\w+)(?: ))?(?:(\w+)(?: ))?(?:(\w+)(?: ))?(?:(\w+)(?: ))?(?:(\w+)(?: ))?(?:(\w+)(?: ))?(?:(\w+)(?: ))?(?:(\w+)(?: ))?(?:(\w+)(?: ))?(?:(\w+)(?: ))?(?:(\w+)(?: ))?(?:(\w+)(?: ))?(?:(\w+)(?: ))?(?:(\w+)(?: ))?(?:(\w+)(?: ))?(?:(\w+)(?: ))?))(?<argsList>args[.]{3} )?</code>
+|}
+
+==== Global Functions ====
+{| role="presentation" class="wikitable" 
+| colspan="3" | '''Regexes'''
+|-
+| rowspan="2" | '''Name'''
+| [https://regexr.com/5rli4 ''Javascript''] : <code><nowiki>(?<=^to '?)[^ '\n]+</nowiki></code>
+|-
+| [https://regexr.com/5rlhu ''QRegExp''] : <code><nowiki>(^\|\n)to '?\K[^ '\n]+</nowiki></code>
+|-
+| rowspan="2" | '''Everything'''
+| [https://regexr.com/5rli7 ''Javascript/QRegExp''] : <code><nowiki>(?<=^\|\n)(?:to )(?:'?)(?<funcName>[^ '\n]+)(?:'?)(?: )(?:(?:(?:(\w+)(?: ))?(?:(\w+)(?: ))?(?:(\w+)(?: ))?(?:(\w+)(?: ))?(?:(\w+)(?: ))?(?:(\w+)(?: ))?(?:(\w+)(?: ))?(?:(\w+)(?: ))?(?:(\w+)(?: ))?(?:(\w+)(?: ))?(?:(\w+)(?: ))?(?:(\w+)(?: ))?(?:(\w+)(?: ))?(?:(\w+)(?: ))?(?:(\w+)(?: ))?(?:(\w+)(?: ))?))(?<argsList>args[.]{3} )?</nowiki></code>
+|}
+
+==== Classes ====
+{| role="presentation" class="wikitable" 
+| colspan="3" | '''Regexes'''
+|-
+| rowspan="2" | '''Name'''
+| [https://regexr.com/5rlk0 ''Javascript''] : <code><nowiki>(?<=^defineClass '?)[^ '\n]+</nowiki></code>
+|-
+| [https://regexr.com/5rlk9 ''QRegExp''] : <code><nowiki>(^|\n)defineClass '?\K[^ '\n]+</nowiki></code>
+|-
+| rowspan="2" | '''Everything'''
+| [https://regexr.com/5rlkc ''Javascript/QRegExp''] : <code><nowiki>(?:^defineClass )(?:'?)(?<className>\w+)(?:'?)(?: )?(?:(?:(?:(\w+)(?: ))?(?:(\w+)(?: ))?(?:(\w+)(?: ))?(?:(\w+)(?: ))?(?:(\w+)(?: ))?(?:(\w+)(?: ))?(?:(\w+)(?: ))?(?:(\w+)(?: ))?(?:(\w+)(?: ))?(?:(\w+)(?: ))?(?:(\w+)(?: ))?(?:(\w+)(?: ))?(?:(\w+)(?: ))?(?:(\w+)(?: ))?(?:(\w+)(?: ))?(?:(\w+))?))</nowiki></code>
+|}
+
+
+== Comments ==
+
+==== Comment function (<code>comment 'text'</code>) ====
+{| role="presentation" class="wikitable" 
+| colspan="3" | '''Regexes'''
+|-
+| rowspan="2" | '''Name'''
+| [https://regexr.com/5s3so ''Javascript''] : <code><nowiki>(?<=(?:^|\n)[ \t]*(?:comment '))((?:''|[^'])*)</nowiki></code>
+|-
+| [https://regexr.com/5s13d ''QRegExp''] : <code><nowiki>(^|\n)[ \t]*comment '\K((''|[^'])*)</nowiki></code>
+|-
+| rowspan="2" | '''Everything'''
+| [https://regexr.com/5s12u ''Javascript''] : <code><nowiki>(?<=(?:^|\n)[ \t]*)(?:comment ')(?<text>(?:''|[^'])*)(?:')</nowiki></code>
+|-
+| [https://regexr.com/5s131 ''QRegExp''] : <code><nowiki>(?:^|\n)[ \t]*\K(?:comment ')(?<text>(?:''|[^'])*)(?:')</nowiki></code>
+|}
+
+
+
+
+<!--{| role="presentation" class="wikitable" 
+| colspan="3" | '''Regexes'''
+|-
+| rowspan="2" | '''Name'''
+| [https://regexr.com/5rli4 ''Javascript''] : <code><nowiki></nowiki></code>
+|-
+| [https://regexr.com/5rlhu ''QRegExp''] : <code><nowiki></nowiki></code>
+|-
+| rowspan="2" | '''Everything'''
+| [https://regexr.com/5rli7 ''Javascript/QRegExp''] : <code><nowiki></nowiki></code>
+|}-->
